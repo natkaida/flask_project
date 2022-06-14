@@ -23,7 +23,7 @@
           <div class="portfolio-wrap">
             <img src="static/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4><a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a></h4>
+              <h4><a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}" data-gallery="blogDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox">{{ post.title }}</a></h4>
               <p>{{ post.description }}</p>
               <div class="portfolio-links">
                 <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}" data-gallery="blogDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox"><i class="bx bx-caret-down-circle" style="padding-top: 15px"></i></a>
