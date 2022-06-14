@@ -1,1 +1,1 @@
-# flask_project
+# flask_project for proglib.io
