@@ -1,0 +1,16 @@
+{% block content %}
+<h2>Блог - тестовый запуск</h2>
+            {% for post in posts %}
+            <small>{{ post.date }}</small>
+            <p>
+              <h3>
+                {{ post.title }}
+              </h3> 
+            <p>
+              <i>{{ post.description }}</i>
+            </p>
+             <p>{{ post.html[:100]|safe }}</p> 
+                <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}"><span>Читать</span></a> 
+            </p>
+            {% endfor %}
+{% endblock %}

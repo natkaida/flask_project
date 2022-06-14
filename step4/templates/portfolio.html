@@ -1,0 +1,24 @@
+ {% block portfolio %}
+ <!-- ======= Портфолио ======= -->
+  <section id="portfolio" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Портфолио</h2>
+        <p>Завершенные проекты</p>
+      </div>
+    <div class="row">
+       {% block content %}
+       {% for card in cards %} <!-- вывод карточек -->
+         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="{{ card.icon }}"></i></div>
+            <h4><a href="{{ url_for('card', name=card.path.replace('portfolio/', '')) }}"data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox">{{ card.title }}</a></h4>
+            <p>{{ card.description }}</p>
+          </div>
+        </div>
+      {% endfor %}
+      {% endblock %}
+    </div>
+   </div>
+  </section><!-- конец портфолио -->
+{% endblock %}

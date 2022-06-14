@@ -1,0 +1,11 @@
+﻿Click==7.0
+Flask==1.1.1
+Flask-FlatPages==0.7.1
+Frozen-Flask==0.15
+itsdangerous==1.1.0
+Jinja2==2.10.3
+Markdown==3.1.1
+MarkupSafe==1.1.1
+Pygments==2.4.2
+PyYAML==5.1.2
+Werkzeug==0.16.0

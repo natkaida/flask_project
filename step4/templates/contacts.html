@@ -1,0 +1,71 @@
+{% block contacts %}
+  <!-- ======= Контакты ======= -->
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Контакты</h2>
+        <p>Соцсети и почта</p>
+      </div>
+
+      <div class="row mt-2">
+
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-map"></i>
+            <h3>Город</h3>
+            <p>{{ city }}</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-share-alt"></i>
+            <h3>Facebook & VK</h3>
+            <div class="social-links">
+              <a href="{{ vk }}" class="vkontakte"><i class="fa fa-vk"></i></a>
+              <a href="{{ facebook }}" class="facebook"><i class="fa fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-envelope"></i>
+            <h3>Email-адрес</h3>
+            <p><a href="{{ email }}">{{ email.split(':')[1] }}</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-paper-plane"></i>
+            <h3>Телеграм</h3>
+            <p><a href="{{ telegram }}">{{ '@'+telegram.split('/')[3] }}</a></p>
+          </div>
+        </div>
+      </div>
+
+      <form action="https://formspree.io/f/mayvolep"  method="post" role="form" class="eform mt-4">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Имя" required>
+          </div>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Ваш Email" required>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="Тема" required>
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="Сообщение" required></textarea>
+        </div>
+        <div class="my-3">
+
+        </div>
+        <div class="text-center"><button type="submit">Отправить</button></div>
+      </form>
+
+    </div>
+  </section><!-- конец секции Контакты -->
+{% endblock %}  

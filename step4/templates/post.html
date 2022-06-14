@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+body::before {
+	background: #040404 url("{{ url_for('static', filename='img/portfolio/post.jpg') }}");
+}
+</style>
+    <!-- ======= шаблон для поста ======= -->
+    <div id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="portfolio-title">{{ post.title }}</h2>
+          </div>
+          <div class="col-lg-8 portfolio-info">
+            <h3>{{ post.dеscription }}</h3>
+            <ul>
+              <li><strong>Категория</strong>: {{ post.tag.title() }}</li>
+              <li><strong>Проект</strong>: {{ post.project }}</li>
+              <li><strong>Статья опубликована</strong>: {{ post.date }}</li>
+              <li><strong>Платформа</strong>: <a href="{{ post.link }}">{{ post.platform}}</a></li>
+            </ul>
+            <p>
+              {{ post.html|safe }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div><!-- конец карточки -->
+  <!-- конец поста -->
+{% endblock %}
